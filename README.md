@@ -46,3 +46,4 @@ Any feature requests and pull requests are welcome!
 
 The project is under [MIT license](https://choosealicense.com/licenses/mit/).
 # weather_app_Kana_Fujihira
+# weather_app_Simplon_Kana_Fujihira
