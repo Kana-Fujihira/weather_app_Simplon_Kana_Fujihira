@@ -33,9 +33,21 @@ export const degToCompass = (num) => {
 };
 
 export const unixToLocalTime = (unixSeconds, timezone) => {
-  let time = new Date((unixSeconds + timezone) * 1000)
-    .toISOString()
-    .match(/(\d{2}:\d{2})/)[0];
+  try {
+    let date = new Date((unixSeconds + timezone) * 1000);
 
-  return time.startsWith("0") ? time.substring(1) : time;
+    // Dateオブジェクトが無効でないか確認
+    if (isNaN(date.getTime())) {
+      throw new Error("Invalid date");
+    }
+
+    // 時刻をISO形式で取得して、マッチング
+    let time = date.toISOString().match(/(\d{2}:\d{2})/)[0];
+
+    return time.startsWith("0") ? time.substring(1) : time;
+  } catch (error) {
+    console.error("Error converting unix time:", error.message);
+    return "Invalid time";
+  }
 };
+
