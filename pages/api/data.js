@@ -25,7 +25,8 @@ export default async function handler(req, res) {
   const defaultCity = cityData.cities[0];
 
   const getWeatherData = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${defaultCity.latitude}&longitude=${defaultCity.longitude}&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,visibility,wind_speed_10m,wind_direction_80m&daily=sunrise,sunset`
+    `https://api.open-meteo.com/v1/forecast?latitude=${defaultCity.latitude}&longitude=${defaultCity.longitude}&current=temperature_2m,apparent_temperature&hourly=relative_humidity_2m,visibility,wind_speed_10m,wind_direction_10m&daily=weather_code,sunrise,sunset&timezone=Europe%2FBerlin`
+
   );
   const data = await getWeatherData.json();
   res.status(200).json(data);
