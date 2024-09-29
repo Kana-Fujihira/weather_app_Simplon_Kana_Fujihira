@@ -1,20 +1,18 @@
 import Image from "next/image";
 import { ctoF } from "../services/converters";
 import styles from "./MainCard.module.css";
+import {cityData} from "../pages/api/data.js"
 
 export const MainCard = ({
-  // city,
-  // country,
   weatherCode,
-  // iconName,
   unitSystem,
   weatherData,
 }) => {
+  
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.location}>
-        {/* {city}, {country} */}
-      </h1>
+      {cityData.cities[0].name}, {cityData.cities[0].country}</h1>
       <p className={styles.description}>{weatherCode}</p>
       <Image
         width={300}
