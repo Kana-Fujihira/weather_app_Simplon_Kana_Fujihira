@@ -27,8 +27,15 @@ export const App = () => {
       const data = await res.json();
       setWeatherData({ ...data });
     };
+  
     getData();
-  }, [triggerFetch]);
+
+    const intervalId = setInterval(() => {
+      getData();
+    }, 3600000); 
+
+    return () => clearInterval(intervalId);
+  }, [cityInput, triggerFetch]); 
 
   const changeSystem = () =>
     unitSystem == "metric"
