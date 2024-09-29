@@ -7,14 +7,11 @@ import { DateAndTime } from "../components/DateAndTime";
 import { MetricsBox } from "../components/MetricsBox";
 import { UnitSwitch } from "../components/UnitSwitch";
 import { LoadingScreen } from "../components/LoadingScreen";
-// import cities from "./data.json";
 import styles from "../styles/Home.module.css";
 
 export const App = () => {
-  const [cityInput, setCityInput] = useState({
-   latitude: 45.7485,
-    longitude: 4.8467,
-  });
+  const [cityInput, setCityInput] = useState(
+);
 
   const [triggerFetch, setTriggerFetch] = useState(true);
   const [weatherData, setWeatherData] = useState();
@@ -41,9 +38,7 @@ export const App = () => {
   return weatherData && !weatherData.message ? (
     <div className={styles.wrapper}>
       <MainCard
-      // name={cities.name}
-      // country={cities.country}
-      weatherCode={weatherData.hourly.weather_code}
+      // weatherCode={weatherData.hourly.weather_code}
         // iconName={weatherData.weather[0].icon}
         unitSystem={unitSystem}
         weatherData={weatherData}

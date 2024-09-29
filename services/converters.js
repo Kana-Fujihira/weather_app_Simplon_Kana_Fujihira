@@ -32,22 +32,13 @@ export const degToCompass = (num) => {
   return arr[val % 16];
 };
 
-export const unixToLocalTime = (unixSeconds, timezone) => {
-  try {
-    let date = new Date((unixSeconds + timezone) * 1000);
+export const unixToLocalTime = (currentTime, timezone) => {
+  console.log(currentTime, timezone);
 
-    // Dateオブジェクトが無効でないか確認
-    if (isNaN(date.getTime())) {
-      throw new Error("Invalid date");
-    }
-
-    // 時刻をISO形式で取得して、マッチング
-    let time = date.toISOString().match(/(\d{2}:\d{2})/)[0];
-
-    return time.startsWith("0") ? time.substring(1) : time;
-  } catch (error) {
-    console.error("Error converting unix time:", error.message);
-    return "Invalid time";
-  }
+  return currentTime && currentTime.startsWith("0")
+    ? currentTime.substring(12)
+    : currentTime
+    ? currentTime.substring(11)
+    : null;
 };
 
