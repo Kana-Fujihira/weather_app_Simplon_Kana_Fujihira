@@ -38,7 +38,7 @@ export const getWeekDay = (weatherData) => {
     "Friday",
     "Saturday",
   ];
-  // ISO 8601形式の時間をDateオブジェクトに変換
+  
   const localTime = new Date(weatherData.current.time);
-  return weekday[localTime.getDay()]; // getDay()を使用
+  return weekday[localTime.getDay()]; 
 };
