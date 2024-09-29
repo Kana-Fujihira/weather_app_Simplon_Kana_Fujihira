@@ -35,12 +35,12 @@ const sunset = weatherData
       <MetricsCard
         title={"Wind direction"}
         iconSrc={"/icons/compass.png"}
-        metric={degToCompass(unitSystem,weatherData.hourly.wind_direction_80m[0])}
+        metric={degToCompass(weatherData.hourly.wind_direction_10m[0])}
       />
       <MetricsCard
         title={"Visibility"}
         iconSrc={"/icons/binocular.png"}
-        metric={getVisibility(unitSystem, weatherData.hourly.visibility)}
+        metric={getVisibility(unitSystem, weatherData.hourly.visibility[0])}
         unit={unitSystem == "metric" ? "km" : "miles"}
       />
       <MetricsCard
