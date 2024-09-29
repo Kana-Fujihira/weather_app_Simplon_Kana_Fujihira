@@ -89,6 +89,7 @@ export const MainCard = ({
   
   const weatherImage = getWeatherImage(code);
 
+
   return (
     <div className={styles.wrapper}>
      <p>  Current Weather  </p> 
@@ -96,6 +97,7 @@ export const MainCard = ({
       
       {cityData.cities[0].name}, {cityData.cities[0].country}</h1>
       <p className={styles.description}>{getWeatherDescription(code)}</p>
+
       <Image
         width={300}
         height={300}
