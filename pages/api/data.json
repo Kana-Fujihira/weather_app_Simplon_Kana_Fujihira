@@ -1,0 +1,23 @@
+{
+  "cities": [
+    {
+      "name": "Lyon",
+      "country": "France",
+      "latitude": 45.7485,
+      "longitude": 4.84670
+    },
+    {
+      "name": "Tokyo",
+      "country": "Japan",
+      "latitude": 35.6895,
+      "longitude": 139.69170
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "latitude": 48.8534,
+      "longitude": 2.34880
+    }
+  ]
+};
+
