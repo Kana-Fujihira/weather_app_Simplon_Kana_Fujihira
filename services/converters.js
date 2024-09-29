@@ -32,10 +32,13 @@ export const degToCompass = (num) => {
   return arr[val % 16];
 };
 
-export const unixToLocalTime = (unixSeconds, timezone) => {
-  let time = new Date((unixSeconds + timezone) * 1000)
-    .toISOString()
-    .match(/(\d{2}:\d{2})/)[0];
+export const unixToLocalTime = (currentTime, timezone) => {
+  console.log(currentTime, timezone);
 
-  return time.startsWith("0") ? time.substring(1) : time;
+  return currentTime && currentTime.startsWith("0")
+    ? currentTime.substring(12)
+    : currentTime
+    ? currentTime.substring(11)
+    : null;
 };
+
