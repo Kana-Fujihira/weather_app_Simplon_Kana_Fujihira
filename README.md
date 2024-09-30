@@ -1,46 +1,39 @@
-# Weather App
+## Weather-app
 
-Check the current weather on any city on the planet. Switch between metric and imperial units.
+![23h](https://github.com/user-attachments/assets/5bac35e1-d114-4459-aead-89614aa61312)
+![0h](https://github.com/user-attachments/assets/5e78aa4c-b225-4a40-b169-15d34ff0f0ca)
 
-![Alt img](https://images.ctfassets.net/zlsyc9paq6sa/3uBrJ07WSM40FpolgjInHY/7d886cb4187b52194bf9b63c183a1d3a/1627637330_x.gif)
 
-## Features
+## Scénario
+Vous êtes développeur web pour le compte d’une agence web. Votre agence a signé un
+contrat pour le développement d’interfaces météo à destination des usagers du réseau de
+transport en commun de plusieurs villes de taille moyenne en France. Les écrans seront
+intégrés aux écrans d’information dans les stations et dans les transports.
+Les écrans doivent être programmés avec les technologies web, embarquées dans la webview
+du système des écrans de la compagnie de transports en commun de la ville.
+Par chance vous avez un projet existant disponible. Mais celui-ci utilise l’API REST d’open
+weather map. Hors vous devez utiliser l’API d’open meteo à la place.
+De plus, l’interface ne doit plus inclure de moteur de recherche pour la localisation de
+l’information météo. Mais, elle doit inclure un fichier de configuration (JSON par exemple)
+dans lequel l’information de la ville concernée sera entrée par l’entreprise de transport, et
+utilisée par votre code pour récupérer les bonnes données météo.
+Le dépôt git du projet existant, votre point de départ :
+https://github.com/madzadev/weather-app
 
-1. User's ability to search cities
+## Livrables
 
-2. Current local time and date
+Les fichiers source seront partagés via l’url d’un dépôt Git accessible en ligne (Github, Gitlab...).
 
-3. Temperatures and humidity
+## Mettre à jour l’application
+● Intégrer le changement d’API en faveur d’open meteo :
+○ prendre en main la documentation et le fonctionnement de l’API open meteo,
+○ intégrer les changements dans la requête,
+○ intégrer les mises à jour nécessaires pour le traitement des données et l’affichage du résultat, en fonction du format de réponse de l’API d’open meteo.
+○ Intégrer l’évolution pour ne plus avoir de recherche de la ville mais une localisation pré-configurée dans un fichier de configuration.
+○ Intégrer le rafraîchissement des données toutes les heures.
 
-4. Wind speed and direction
-
-5. Sunrise and sunset times
-
-6. Metric vs Imperial system
-
-7. Error handling and loading info
-
-## Installation
-
-1. `git clone https://github.com/madzadev/weather-app.git`
-
-2. `cd weather-app`
-
-3. `npm install`
-
-4. Log-in to [Openweathermap.com](https://openweathermap.org/)
-
-5. Create an API key
-
-6. `cp .env.example .env.local`
-
-7. Paste API key for `OPENWEATHER_API_KEY`
-
-8. `npm run dev`
-
-## Contributions
-
-Any feature requests and pull requests are welcome!
+## Tester l’application et livrer
+● validez, puis livrez votre projet sur un dépôt Git en ligne.
 
 ## License
 
