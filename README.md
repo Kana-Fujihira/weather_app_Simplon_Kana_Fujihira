@@ -36,7 +36,4 @@ Les fichiers source seront partagés via l’url d’un dépôt Git accessible e
 ● validez, puis livrez votre projet sur un dépôt Git en ligne.
 
 ## License
-
 The project is under [MIT license](https://choosealicense.com/licenses/mit/).
-# weather_app_Kana_Fujihira
-# weather_app_Simplon_Kana_Fujihira
